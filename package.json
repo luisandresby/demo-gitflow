@@ -1,7 +1,7 @@
 {
   "name": "demo-git-flow",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -27,9 +27,6 @@
     },
     "npm": {
       "publish": false
-    },
-    "hooks": {
-      "after:bump": "npm run version:sync"
     },
     "plugins": {
       "@release-it/conventional-changelog": {
