@@ -14,9 +14,49 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^9.0.3",
     "@vitejs/plugin-vue": "^5.2.1",
+    "release-it": "^17.10.0",
     "unplugin-auto-import": "^0.18.6",
     "unplugin-vue-components": "^0.27.5",
     "vite": "^6.0.1"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "release ${version}"
+    },
+    "npm": {
+      "publish": false
+    },
+    "hooks": {
+      "after:bump": "npm run version:sync"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "ignoreRecommendedBump": true,
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "internal",
+              "section": "Internal"
+            },
+            {
+              "type": "chore",
+              "section": "Internal"
+            }
+          ]
+        }
+      }
+    }
   }
 }
