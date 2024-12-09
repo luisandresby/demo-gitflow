@@ -23,6 +23,7 @@
   },
   "release-it": {
     "git": {
+      "requireBranch": "develop",
       "tagName": "v${version}",
       "requireCleanWorkingDir": true,
       "commitMessage": "chore: release v${version}",
@@ -30,6 +31,12 @@
     },
     "npm": {
       "publish": false
+    },
+    "hooks": {
+      "before:init": "git pull origin develop",
+      "after:bump": "git flow release start ${version}",
+      "after:release": "git flow release finish -m 'Release ${version}' ${version}",
+      "after:git:release": "git push --follow-tags origin main develop"
     },
     "plugins": {
       "@release-it/conventional-changelog": {
