@@ -1,5 +1,12 @@
 
 
+## [0.0.1-3](https://github.com/luisandresby/demo-gitflow/compare/v0.0.1-2...v0.0.1-3) (2024-12-09)
+
+### Bug Fixes
+
+* update package.json ([c0d6099](https://github.com/luisandresby/demo-gitflow/commit/c0d6099ae151e1fbad33e9b6e66f935de45145b1))
+* update package.json ([25121d5](https://github.com/luisandresby/demo-gitflow/commit/25121d52df939b0fe62544207ae3023206886f04))
+
 ## [0.0.1-2](https://github.com/luisandresby/demo-gitflow/compare/0.0.1-1...v0.0.1-2) (2024-12-09)
 
 ### Internal
